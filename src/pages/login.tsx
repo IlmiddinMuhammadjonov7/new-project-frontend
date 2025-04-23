@@ -68,7 +68,7 @@ const Login = () => {
     try {
       if (state === "login") {
         const res = await axios.post(
-          "http://new-project-backend-production.up.railway.app/api/auth/login",
+          "https://new-project-backend-production.up.railway.app/api/auth/login",
           {
             login_name: values.username,
             password: values.password,
@@ -103,7 +103,7 @@ const Login = () => {
       } else {
         // Register
         const res = await axios.post(
-          "http://new-project-backend-production.up.railway.app/api/auth/register",
+          "https://new-project-backend-production.up.railway.app/api/auth/register",
           {
             name: values.name,
             surname: values.surname,
