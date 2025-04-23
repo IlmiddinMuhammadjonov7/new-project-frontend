@@ -1,5 +1,5 @@
-const API_URL = "http://new-project-backend-production.up.railway.app/api/assignments";
-const LESSON_API = "http://new-project-backend-production.up.railway.app/api/lessons";
+const API_URL = "https://new-project-backend-production.up.railway.app/api/assignments";
+const LESSON_API = "https://new-project-backend-production.up.railway.app/api/lessons";
 const TOKEN = localStorage.getItem("adminToken");
 
 const authHeader = {

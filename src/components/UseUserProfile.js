@@ -10,19 +10,19 @@ const getAuthHeader = () => {
 };
 
 export const getUserProfile = async (userId) => {
-  const res = await axios.get(`http://new-project-backend-production.up.railway.app/api/users/${userId}`, getAuthHeader());
+  const res = await axios.get(`https://new-project-backend-production.up.railway.app/api/users/${userId}`, getAuthHeader());
   return res.data;
 };
 
 export const updateUserProfile = async (userId, updatedData) => {
-  const res = await axios.put(`http://new-project-backend-production.up.railway.app/api/users/${userId}`, updatedData, getAuthHeader());
+  const res = await axios.put(`https://new-project-backend-production.up.railway.app/api/users/${userId}`, updatedData, getAuthHeader());
   return res.data;
 };
 
 export const getAllUsers = async () => {
   const token = localStorage.getItem("adminToken"); // yoki 'accessToken', qanday nomlading
 
-  const res = await axios.get("http://new-project-backend-production.up.railway.app/api/users", {
+  const res = await axios.get("https://new-project-backend-production.up.railway.app/api/users", {
     headers: {
       Authorization: `Bearer ${token}`,
     },

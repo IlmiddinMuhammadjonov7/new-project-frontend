@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://new-project-backend-production.up.railway.app/api";
+const BASE_URL = "https://new-project-backend-production.up.railway.app/api";
 
 // Tokenni olish
 const getAuthHeaders = () => {

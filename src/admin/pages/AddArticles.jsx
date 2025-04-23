@@ -21,7 +21,7 @@ export default function AdminArticleForm() {
         try {
           const token = localStorage.getItem("adminToken");
           const res = await axios.get(
-            `http://new-project-backend-production.up.railway.app/api/articles/${id}`,
+            `https://new-project-backend-production.up.railway.app/api/articles/${id}`,
             {
               headers: { Authorization: `Bearer ${token}` },
             }
