@@ -11,31 +11,31 @@ const pages = [
   {
     id: 1,
     title: "Darsliklar",
-    imagePath: {Rasm2},
+    imagePath: Rasm2,
     path: "/admin/darsliklar",
   },
   {
     id: 2,
     title: "Testlar",
-    imagePath: {Rasm3},
+    imagePath: Rasm3,
     path: "/admin/testlar",
   },
   {
     id: 3,
     title: "Analitika",
-    imagePath: {Rasm4},
+    imagePath: Rasm4,
     path: "/admin/analitika",
   },
   {
     id: 4,
     title: "Topshiriqlar",
-    imagePath: {Rasm5},
+    imagePath: Rasm5,
     path: "/admin/topshiriqlar",
   },
   {
     id: 5,
     title: "Maqolalarim",
-    imagePath: {Rasm6},
+    imagePath: Rasm6,
     path: "/admin/maqolalarim",
   },
 ];
