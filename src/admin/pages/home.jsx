@@ -1,37 +1,41 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Rasm from "../../assets/homeuser.png";
-
+import Rasm2 from "../../assets/darslar.png";
+import Rasm3 from "../../assets/testlar.png";
+import Rasm4 from "../../assets/analitika.png";
+import Rasm5 from "../../assets/topshiriqlar.png";
+import Rasm6 from "../../assets/maqolalar.png";
 
 const pages = [
   {
     id: 1,
     title: "Darsliklar",
-    imagePath: "/src/assets/darslar.png",
+    imagePath: {Rasm2},
     path: "/admin/darsliklar",
   },
   {
     id: 2,
     title: "Testlar",
-    imagePath: "/src/assets/testlar.png",
+    imagePath: {Rasm3},
     path: "/admin/testlar",
   },
   {
     id: 3,
     title: "Analitika",
-    imagePath: "/src/assets/analitika.png",
+    imagePath: {Rasm4},
     path: "/admin/analitika",
   },
   {
     id: 4,
     title: "Topshiriqlar",
-    imagePath: "/src/assets/topshiriqlar.png",
+    imagePath: {Rasm5},
     path: "/admin/topshiriqlar",
   },
   {
     id: 5,
     title: "Maqolalarim",
-    imagePath: "/src/assets/maqolalar.png",
+    imagePath: {Rasm6},
     path: "/admin/maqolalarim",
   },
 ];
