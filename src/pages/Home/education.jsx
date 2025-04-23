@@ -24,7 +24,7 @@ export default function Education() {
             </button>
           </div>
         </div>
-        <div className="flex flex-col h-auto justify-between w-full items-start mb-5 md:flex-row md:items-center">
+        <div className="flex mt-4 flex-col h-auto justify-between w-full items-start mb-5 md:flex-row md:items-center">
           <div className="bg-center h-[270px] w-full elementimg lg:h-[384px] max-w-[450px] md:max-w-[600px] md:w-1/2"></div>
           <div className="flex flex-col h-full gap-[20px] md:w-1/2">
             <h1 className="text-[#13265C] text-[16px] font-semibold lg:text-2xl md:text-xl">

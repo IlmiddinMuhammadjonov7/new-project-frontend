@@ -4,6 +4,8 @@ import { Link } from "react-scroll";
 import { NavmenuList } from "../../utils/constant";
 import { FaUser } from "react-icons/fa";
 import { Drawer } from "antd";
+import Rasm7 from '../../assets/Logo 3.png'
+
 
 export default function Header() {
   const location = useLocation();
@@ -21,14 +23,14 @@ export default function Header() {
   return (
     <>
       <header className="flex bg-[#E2EAFF] h-auto justify-center w-full items-center">
-        <nav className="flex h-[75px] justify-between w-[90%] items-center xl:w-[80%]">
+        <nav className="flex mt-6 h-[75px] justify-between w-[90%] items-center xl:w-[80%]">
           {/* logo */}
           <div>
             <Link
               to={"/"}
-              className="text-[16px] font-extrabold lg:text-[32px] md:text-[24px] uppercase"
+              className="font-extrabold lg:text-[32px] md:text-[24px] uppercase"
             >
-              Sayt Nomi
+              <img style={{width: "130px", height: "120px"}} src={Rasm7} alt="" />
             </Link>
           </div>
           {/* menu list */}

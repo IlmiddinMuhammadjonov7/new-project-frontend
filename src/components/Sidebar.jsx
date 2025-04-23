@@ -11,6 +11,8 @@ import {
   MenuOutlined,
 } from "@ant-design/icons";
 import { motion } from "framer-motion";
+import Rasm7 from '../assets/Logo 3.png'
+
 
 const Sidebar = () => {
   const location = useLocation();
@@ -79,8 +81,17 @@ const Sidebar = () => {
           </button>
         )}
 
-        <h1 className="text-xl font-bold mb-6 ml-5 ">
-          <Link to={"/"} style={{fontSize: "25px", color: "rgb(55, 55, 159)"}}>Home</Link>
+        <h1 className="text-xl font-bold">
+          <Link
+            to={"/"}
+            style={{ fontSize: "25px", color: "rgb(55, 55, 159)" }}
+          >
+            <img
+              style={{ width: "130px", height: "120px", marginBottom: "-20px" }}
+              src={Rasm7}
+              alt=""
+            />
+          </Link>
         </h1>
 
         <Menu

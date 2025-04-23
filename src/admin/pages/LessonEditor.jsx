@@ -8,14 +8,13 @@ import { getAuthHeaders } from "../../utils/auth";
 export default function LessonEditor({ lesson, onClose }) {
   const [title, setTitle] = useState(lesson?.title || "");
   const [description, setDescription] = useState(lesson?.description || "");
-  const [videoType, setVideoType] = useState(
-    lesson?.video_url ? "url" : "file"
-  );
+  const [videoType, setVideoType] = useState(lesson?.video_url ? "url" : "file");
   const [videoUrl, setVideoUrl] = useState(lesson?.video_url || "");
   const [videoFile, setVideoFile] = useState(null);
   const [materials, setMaterials] = useState(
     lesson?.materials?.map((m) => ({ ...m, file: null, isNew: false })) || []
   );
+  const [isLoading, setIsLoading] = useState(false); // ⏳ LOADING HOLATI
 
   const handleAddMaterial = () => {
     setMaterials([...materials, { name: "", file: null, isNew: true }]);
@@ -48,19 +47,18 @@ export default function LessonEditor({ lesson, onClose }) {
 
     const headers = getAuthHeaders().headers;
 
+    setIsLoading(true); // ⏳ LOADING BOSHLANDI
     try {
       const formData = new FormData();
       formData.append("title", title);
       formData.append("description", description);
 
-      // 🔄 Video joylash
       if (isFileUpload && videoFile) {
         formData.append("video_file", videoFile);
       } else if (videoType === "url" && videoUrl) {
         formData.append("video_url", videoUrl);
       }
 
-      // 🔄 Fayllarni qo‘shish
       const materialNames = [];
       materials.forEach((m) => {
         if (m.name) {
@@ -72,7 +70,6 @@ export default function LessonEditor({ lesson, onClose }) {
       });
       formData.append("material_names", JSON.stringify(materialNames));
 
-      // ✅ PUT yoki POST yuborish
       await axios({
         method: isEditing ? "put" : "post",
         url,
@@ -87,6 +84,8 @@ export default function LessonEditor({ lesson, onClose }) {
     } catch (error) {
       console.error("Darsni saqlashda xatolik:", error);
       alert("Darsni saqlashda xatolik yuz berdi.");
+    } finally {
+      setIsLoading(false); // ⏹️ LOADING TUGADI
     }
   };
 
@@ -106,9 +105,7 @@ export default function LessonEditor({ lesson, onClose }) {
               onChange={(e) => setTitle(e.target.value)}
             />
             <div className="flex items-center gap-2">
-              <label className="text-sm font-medium">
-                Videoni ochiq qilish
-              </label>
+              <label className="text-sm font-medium">Videoni ochiq qilish</label>
               <input type="checkbox" className="toggle" />
             </div>
             <textarea
@@ -124,8 +121,7 @@ export default function LessonEditor({ lesson, onClose }) {
             <div>
               <h4 className="font-semibold text-sm mb-1">Videoni yuklash</h4>
               <p className="text-xs text-gray-500 mb-2">
-                Videoingizni bu yerga qo‘shing va maksimal 100 mb videoni
-                yuklashingiz mumkin
+                Videoingizni bu yerga qo‘shing va maksimal 100 mb videoni yuklashingiz mumkin
               </p>
 
               {videoType === "file" ? (
@@ -137,22 +133,14 @@ export default function LessonEditor({ lesson, onClose }) {
                     className="hidden"
                     id="video-upload"
                   />
-                  <label
-                    htmlFor="video-upload"
-                    className="cursor-pointer block"
-                  >
+                  <label htmlFor="video-upload" className="cursor-pointer block">
                     📁 Drag your file(s) to start uploading <br /> OR <br />
-                    <span className="underline text-blue-600">
-                      Browse files
-                    </span>
+                    <span className="underline text-blue-600">Browse files</span>
                   </label>
-                  <p className="mt-2 text-xs text-gray-400">
-                    Only .mp4 supported
-                  </p>
+                  <p className="mt-2 text-xs text-gray-400">Only .mp4 supported</p>
                   {videoFile && (
                     <div className="mt-2 text-xs text-green-600 font-medium">
-                      ✅ {videoFile.name} (
-                      {(videoFile.size / 1024 / 1024).toFixed(2)} MB) yuklandi
+                      ✅ {videoFile.name} ({(videoFile.size / 1024 / 1024).toFixed(2)} MB) yuklandi
                     </div>
                   )}
                 </div>
@@ -164,7 +152,6 @@ export default function LessonEditor({ lesson, onClose }) {
                 />
               )}
 
-              {/* Toggle */}
               <div className="mt-3 flex gap-4">
                 <label className="text-sm">
                   <input
@@ -191,7 +178,6 @@ export default function LessonEditor({ lesson, onClose }) {
               </div>
             </div>
 
-            {/* Fayllar */}
             <div>
               <h4 className="text-sm font-semibold mb-2">Fayl biriktirish</h4>
               <Button onClick={handleAddMaterial} className="mb-2">
@@ -230,8 +216,12 @@ export default function LessonEditor({ lesson, onClose }) {
           </div>
         </div>
 
-        <Button className="mt-6 w-full" onClick={handleSubmit}>
-          {lesson ? "Yangilash" : "Yuklash"}
+        <Button
+          className="mt-6 w-full"
+          onClick={handleSubmit}
+          disabled={isLoading}
+        >
+          {isLoading ? "⏳ Yuklanmoqda..." : lesson ? "Yangilash" : "Yuklash"}
         </Button>
       </DialogContent>
     </Dialog>
