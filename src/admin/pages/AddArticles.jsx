@@ -48,14 +48,14 @@ export default function AdminArticleForm() {
     try {
       if (isEdit) {
         await axios.put(
-          `http://new-project-backend-production.up.railway.app/api/articles/${id}`,
+          `https://new-project-backend-production.up.railway.app/api/articles/${id}`,
           articleData,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
         );
       } else {
-        await axios.post("http://new-project-backend-production.up.railway.app/api/articles", articleData, {
+        await axios.post("https://new-project-backend-production.up.railway.app/api/articles", articleData, {
           headers: { Authorization: `Bearer ${token}` },
         });
       }

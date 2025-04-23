@@ -80,7 +80,7 @@ export const getAssignmentSubmissions = async (assignmentId) => {
 
 // Foydalanuvchi topshirgan javobni holatini yangilash
 export const updateSubmissionStatus = async (submissionId, status) => {
-  const res = await fetch(`http://new-project-backend-production.up.railway.app/api/submissions/${submissionId}/status`, {
+  const res = await fetch(`https://new-project-backend-production.up.railway.app/api/submissions/${submissionId}/status`, {
     method: "PUT",
     headers: {
       ...authHeader,
