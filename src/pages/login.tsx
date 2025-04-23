@@ -67,10 +67,13 @@ const Login = () => {
   const onFinish = async (values) => {
     try {
       if (state === "login") {
-        const res = await axios.post("http://localhost:8080/api/auth/login", {
-          login_name: values.username,
-          password: values.password,
-        });
+        const res = await axios.post(
+          "http://new-project-backend-production.up.railway.app/api/auth/login",
+          {
+            login_name: values.username,
+            password: values.password,
+          }
+        );
 
         const { token, user } = res.data;
         const role = user.role;
@@ -100,7 +103,7 @@ const Login = () => {
       } else {
         // Register
         const res = await axios.post(
-          "http://localhost:8080/api/auth/register",
+          "http://new-project-backend-production.up.railway.app/api/auth/register",
           {
             name: values.name,
             surname: values.surname,
