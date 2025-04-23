@@ -15,7 +15,7 @@ const CoursePage = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
 
-    fetch(`http://localhost:8080/api/lessons/${courseId}`, {
+    fetch(`http://new-project-backend-production.up.railway.app/api/lessons/${courseId}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },

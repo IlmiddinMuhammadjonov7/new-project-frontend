@@ -19,7 +19,7 @@ export default function LessonsAdmin() {
 
   const fetchLessons = async () => {
     const res = await axios.get(
-      "http://localhost:8080/api/lessons",
+      "http://new-project-backend-production.up.railway.app/api/lessons",
       getAuthHeaders()
     );
     setLessons(res.data);
@@ -31,7 +31,7 @@ export default function LessonsAdmin() {
 
   const handleDelete = async () => {
     await axios.delete(
-      `http://localhost:8080/api/lessons/${deletingLessonId}`,
+      `http://new-project-backend-production.up.railway.app/api/lessons/${deletingLessonId}`,
       getAuthHeaders()
     );
     setShowDeleteModal(false);

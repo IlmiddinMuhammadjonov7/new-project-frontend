@@ -41,7 +41,7 @@ export default function TestFormPage() {
   useEffect(() => {
     const token = localStorage.getItem("token");
 
-    fetch("http://localhost:8080/api/lessons", {
+    fetch("http://new-project-backend-production.up.railway.app/api/lessons", {
       headers: {
         Authorization: `Bearer ${token}`,
       },

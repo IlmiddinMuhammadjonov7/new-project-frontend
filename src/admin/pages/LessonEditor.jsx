@@ -43,8 +43,8 @@ export default function LessonEditor({ lesson, onClose }) {
     const isFileUpload = videoType === "file";
 
     const url = isEditing
-      ? `http://localhost:8080/api/lessons/${lesson.id}`
-      : `http://localhost:8080/api/lessons`;
+      ? `http://new-project-backend-production.up.railway.app/api/lessons/${lesson.id}`
+      : `http://new-project-backend-production.up.railway.app/api/lessons`;
 
     const headers = getAuthHeaders().headers;
 

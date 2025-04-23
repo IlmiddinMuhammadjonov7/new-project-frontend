@@ -1,5 +1,5 @@
-const API_URL = "http://localhost:8080/api/assignments";
-const LESSON_API = "http://localhost:8080/api/lessons";
+const API_URL = "http://new-project-backend-production.up.railway.app/api/assignments";
+const LESSON_API = "http://new-project-backend-production.up.railway.app/api/lessons";
 const TOKEN = localStorage.getItem("adminToken");
 
 const authHeader = {
@@ -80,7 +80,7 @@ export const getAssignmentSubmissions = async (assignmentId) => {
 
 // Foydalanuvchi topshirgan javobni holatini yangilash
 export const updateSubmissionStatus = async (submissionId, status) => {
-  const res = await fetch(`http://localhost:8080/api/submissions/${submissionId}/status`, {
+  const res = await fetch(`http://new-project-backend-production.up.railway.app/api/submissions/${submissionId}/status`, {
     method: "PUT",
     headers: {
       ...authHeader,
