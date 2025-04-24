@@ -25,10 +25,11 @@ export default function Education() {
           </div>
         </div>
         <div className="flex mt-4 flex-col h-auto justify-between w-full items-start mb-5 md:flex-row md:items-center">
-          <div className="bg-center h-[270px] w-full elementimg lg:h-[384px] max-w-[450px] md:max-w-[600px] md:w-1/2"></div>
+          <div className="bg-center h-[270px] w-full elementimg lg:h-[384px] max-w-[450px] md:max-w-[600px] sm:w-1/2 mb-4"></div>
           <div className="flex flex-col h-full gap-[20px] md:w-1/2">
             <h1 className="text-[#13265C] text-[16px] font-semibold lg:text-2xl md:text-xl">
-              Biologiya o`qitish metodikasi fаnidan bulutli texnologiyalarga
+              Raqamli texnologiyalar vositasida o'quvchilarning kognitiv
+              faoliyatini rivojlantirish metodikasiga (biologiya fani misolida)
               asoslangan mustaqil ta`lim tizimining mаqsаdi:
             </h1>
             <div className="bg-[#C0D1FF] h-[2px] w-full"></div>

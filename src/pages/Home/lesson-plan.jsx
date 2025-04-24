@@ -34,8 +34,8 @@ export default function LessonPlan() {
               <div className="h-[56px] w-[56px] homeplan md:h-[127px] md:w-[127px]"></div>
             </div>
             <h1 className="text-[#13265C] text-[16px] font-semibold lg:pl-12 lg:text-[32px] max-w-[685px] md:pl-8 md:text-3xl">
-              Biologiya o`qitish metodikasi fаnidan bulutli texnologiyalarga
-              asoslangan mustaqil ta`lim tizimining tarkibi:
+            Raqamli texnologiyalar vositasida o'quvchilarning kognitiv
+            faoliyatini rivojlantirish metodikasi tizimining tarkibi
             </h1>
           </div>
           <div className="flex flex-col max-w-[685px] self-end">
