@@ -29,7 +29,7 @@ const NavmenuList = [
 ];
 
 const AboutSkilList = [
-  { id: 1, title: "Biologiyani o‘qitish metodigi", icon: Icon },
+  { id: 1, title: "Biologiya o'qitish metodikasi bo'yicha mutaxassis", icon: Icon },
   {
     id: 2,
     title: "10 yildan ortiq o‘qituvchilik va tadqiqot faoliyati",

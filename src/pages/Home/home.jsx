@@ -15,11 +15,12 @@ export default function Home() {
               className="h-[130px] w-[130px] homeuser br-50 md:h-[200px] md:w-[200px] ml-4 shrink-0"
               style={{ backgroundPosition: "0px -40px", borderRadius: "50%" }}
             ></div>
-            <div className="w-full max-w-[310px]">
-              <p className="text-[14px] font-normal md:text-[16px] uppercase">
-                Fanlar Doktori
+            <div className="w-full max-w-[610px]">
+              <p className="text-[12px] font-normal md:text-[16px] uppercase">
+                Farg'ona viloyati Rishton tumanidagi 8-maktab biologiya
+                o'qituvchisi, o'quv ishlari bo'yicha direktor o'rinbosari
               </p>
-              <h1 className="text-[#13265C] text-[20px] font-semibold md:text-[32px]">
+              <h1 className="text-[#13265C] text-[18px] font-semibold md:text-[32px]">
                 Ismatillayeva Dilfuza Botirjonova
               </h1>
             </div>
@@ -30,8 +31,7 @@ export default function Home() {
           <div className="md:max-w-1/2">
             <div className="mb-4">
               <p className="text-[#464B59] text-[14px] font-medium md:text-[16px] uppercase">
-                Biologiya fanini o‘qitish metodikasi zamonaviy texnalogiyalar
-                asosida
+                ILMIY TADQIQOT MAVZUSI:
               </p>
             </div>
             <div className="">
@@ -54,10 +54,11 @@ export default function Home() {
           <div className="md:max-w-1/2">
             <div className="flex h-auto justify-end items-center">
               <h4 className="text-[#13265C] text-[16px] font-normal lg:text-[24px] md:text-[20px]">
-                Biologiya o‘qitish fanidan elektron platforma: nazariy darslar,
-                amaliy ishlanmalar, interaktiv topshiriqlar va mavzular bo‘yicha
-                muammoli savollarni forumlar orqali ochiq muhokama qilish
-                imkoniyati.
+                Biologiya fanidan elektron platforma: dars, darsdan tashqari va
+                sinfdan tashqari mashg'ulotlarga doir ishlanmalar, uslubiy
+                tavsiyalar hamda mustaqil ta'limini tashkil etishga oid
+                interfaol topshiriqlar asosida o'quvchilarning kognitiv
+                faoliyatini rivojlantirish metodikasi.
               </h4>
             </div>
           </div>
