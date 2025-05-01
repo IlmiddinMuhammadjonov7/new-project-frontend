@@ -17,7 +17,7 @@ export default function Home() {
             ></div>
             <div className="w-full max-w-[610px]">
               <p className="text-[12px] font-normal md:text-[16px] uppercase">
-                Farg'ona viloyati Rishton tumanidagi 8-maktab biologiya
+                Farg'ona viloyati Rishton tumanidagi 8-maktab biologiya fani
                 o'qituvchisi, o'quv ishlari bo'yicha direktor o'rinbosari
               </p>
               <h1 className="text-[#13265C] text-[18px] font-semibold md:text-[32px]">
